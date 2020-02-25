@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CONTACT DATA | TECLAP</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style type="text/css">
+    .card {
+      /* Add shadows to create the "card" effect */
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    /* Add some padding inside the card container */
+    .container {
+      padding: 2px 16px;
+    }
+  </style>
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+        $('#load').css('display', 'block')
+
+        $.get('https://teclap.herokuapp.com/data', function(data){
+          var td = '<table class="table table-striped"><thead><tr><th>Name</th><th>Email</th><th>Company Name</th><th>Message</th></tr></thead><tbody>'
+
+          for(var i=0; i<data.data.length; i++){
+            td += '<tr><td>'+data.data[i].name+'</td><td>'+data.data[i].email+'</td><td>'+data.data[i].company+'</td><td>'+data.data[i].msg+'</td></tr>'
+          }
+
+          td += '</tbody></table>'
+
+          document.getElementById('data-table').innerHTML = td
+
+          $('#load').css('display', 'none')
+
+        })
+
+    })
+
+  </script>
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="icofont-envelope"></i><a href="mailto:info@teclap.com">info@teclap.com</a>
+        <i class="icofont-phone"></i> +1447452246066
+      </div>
+      <div class="social-links float-right">
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=447452246066" class="twitter"><i class="icofont-whatsapp"></i></a>
+        <a target="_blank" href="https://twitter.com/TeclapP" class="twitter"><i class="icofont-twitter"></i></a>
+        <a target="_blank" href="https://www.instagram.com/teclap_gse_uk/" class="instagram"><i class="icofont-instagram"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/company/tgitdl/about/" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+        <a target="_blank" href="#" class="skype"><i class="icofont-skype"></i></a>
+        <a target="_blank" href="#" class="facebook"><i class="icofont-facebook"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div class="logo float-left">
+         <a href="index.html"><img src="assets/img/teclap-logo.png" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li><a href="./#header">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="drop-down"><a href="">Services</a>
+            <ul>
+              <li><a href="ppp.html">DEPOSIT & PPP</a></li>
+              <li><a href="funding.html">PROJECT FUNDING</a></li>
+              <li><a href="wealth.html">WEALTH MANAGEMENT</a></li>
+              <li><a href="paymaster.html">PAYMASTER & ESCROW</a></li>
+              <li><a href="swift.html">SWIFT SERVICES</a></li>
+              <li><a href="crypto.html">CRYPTO CURRENCY</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Reach Us</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <main id="main">
+
+    <section class="about-lists">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 style="color: #3B5998;">Contact Us Data</h2>
+
+          <p id="load" style="display: none;">Loading data...</p>
+        </div>
+
+        <!-- <div class="row no-gutters" id="login" style="display: block;">
+
+          <div class="col-lg-3"></div>
+
+          <div class="col-lg-6">
+
+            <div class="form-group">
+              <label for="email">Username:</label>
+              <input type="email" class="form-control" placeholder="Enter username" id="username">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+            </div>
+
+            <button id="btn" class="btn btn-primary">Login</button>
+
+          </div>
+          
+          <div class="col-lg-3"></div>                  
+
+        </div> -->
+
+        <div class="row no-gutters" id="data-table" style="">
+
+          <!-- <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Company Name</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Suraj</td>
+                <td>hi@surajjana.com</td>
+                <td>Opencube Labs</td>
+                <td>Test msg... Test msg... Test msg... Test msg... Test msg... Test msg... Test msg... Test msg... Test msg... Test msg... Test msg... Test msg...</td>
+              </tr>
+            </tbody>
+          </table> -->
+
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>Teclap</h3>
+            <p>
+              12 Constance Street<br>
+              London E16 2DQ, UK<br><br>
+              <strong>Phone:</strong> +447452246066<br>
+              <strong>Email:</strong> info@teclap.com<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/TeclapP" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.instagram.com/teclap_gse_uk/" class="instagram"><i class="icofont-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/tgitdl/about/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="./#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="ppp.html">DEPOSIT & PRIVATE PLACEMENT PROGRAMS</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="funding.html">PROJECT FUNDING</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="wealth.html">WEALTH MANAGEMENT</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="paymaster.html">PAYMASTER & ESCROW</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="swift.html">SWIFT SERVICES</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="crypto.html">CRYPTO CURRENCY</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>VRCR Holding Limited</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits" style="display: none;">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <script src="https://kit.fontawesome.com/504aa098c7.js" crossorigin="anonymous"></script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
