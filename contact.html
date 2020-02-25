@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SWIFT SERVICES | TECLAP</title>
+  <title>REACH US | TECLAP</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -47,6 +47,31 @@
     }
   </style>
 
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#btn').click(function(){
+        //console.log('clicked')
+        document.getElementById('load').style.display = 'block'
+        document.getElementById('msg_res').style.display = 'none'
+
+        var name = document.getElementById("name").value
+        var email = document.getElementById("email").value
+        var company = document.getElementById("company").value
+        var msg = document.getElementById("msg").value
+
+        $.get('https://teclap.herokuapp.com/contact?name='+name+'&email='+email+'&company='+company+'&msg='+msg, function(data){
+          console.log(data)
+          document.getElementById("msg_res").style.display = 'block'
+          document.getElementById('load').style.display = 'none'
+
+        })
+
+      })
+    })
+  </script>
+
 </head>
 
 <body>
@@ -80,7 +105,7 @@
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
           <li><a href="./#header">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">About Us</a></li>
           <li class="drop-down"><a href="">Services</a>
             <ul>
               <li><a href="ppp.html">DEPOSIT & PPP</a></li>
@@ -91,115 +116,83 @@
               <li><a href="crypto.html">CRYPTO CURRENCY</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Reach Us</a></li>
+          <li class="active"><a href="#">Reach Us</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="hero-container">
-      <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-
-        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
-        <div class="carousel-inner" role="listbox">
-
-          <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url('assets/img/paymaster.jpg');">
-            <div class="carousel-container">
-              <div class="carousel-content container">
-                <h2 class="animated fadeInDown">SWIFT SERVICES</h2>
-                <p class="animated fadeInUp">SWIFT(“Society for Worldwide Inter-bank Financial Telecommunication”) provide secure mechanisms for electronic interbank messaging and funds transfer.</p>
-                <a href="#start" class="btn-get-started animated fadeInUp scrollto">Explore now</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </section><!-- End Hero -->
 
   <main id="main">
 
-    <!-- ======= Services Section ======= -->
-    <section id="start" class="services">
+    <section class="about-lists">
       <div class="container">
 
         <div class="section-title">
-          <h2 style="color: #3B5998;">SWIFT SERVICES</h2>
+          <h2 style="color: #3B5998;">Reach Us</h2>
         </div>
 
-        <div class="row">
+        <div class="row no-gutters">
 
-          <div class="col-lg-12 text-center" style="margin-bottom: 25px;">
-            <img src="assets/swift.png" style="width: 10%">  
+          <div class="col-lg-4 content-item" data-aos="fade-up">
+            <span style="color: #3B5998;">Address</span>
+            <p style="color: #000;">12 Constance Street<br>
+              London E16 2DQ, UK</p>
           </div>
 
-          <div class="col-lg-12">
+          <div class="col-lg-4 content-item" data-aos="fade-up" data-aos-delay="100">
+            <span style="color: #3B5998;">Email</span>
+            <p style="color: #000;">info@teclap.com</p>
 
-            <p>SWIFT(“Society for Worldwide Inter-bank Financial Telecommunication”) provide secure mechanisms for electronic interbank messaging and funds transfer. SWIFT messages are used to conduct business between transactional partners. Not all SWIFT members are financial institutions. An ordinary corporate can join SWIFT and send messages including MT101. An MT101 would be a very secure and normally high value version of a payment request. Just like a private citizen might use their internet banking to request the bank pays their land lord. If, however you are an airline and you need to pay your fuel bill in an unstable part of the world you would use an MT101. It is said that SWIFT has never had its security compromised. If this is true it is very impressive.</p>
-
-            <p>The SWIFT system was established in the early 1970’s by a group of European banks who until that time had been conducting business together via telex and courier. Each type of SWIFT message is pre-defined and follows a “format specification”. All SWIFT messages must adhere to these established forms or they will be rejected by (a) the central SWIFT system or (b) the receiving bank. There are nine (9) SWIFT message categories with multiple message types in each category.</p>
-
-            <p>We Offer SWIFT Services for RWA, POF, BCL & Pre Advice, BG, LC, SBLC & DLC</p>
-  
           </div>
+
+          <div class="col-lg-4 content-item" data-aos="fade-up" data-aos-delay="200">
+            <span style="color: #3B5998;">Call Us</span>
+            <p style="color: #000;">+447452246066</p>
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=447452246066" class="twitter"><i class="icofont-whatsapp"></i> Reach Us WhatsApp</a>    
+          </div>
+
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>
 
-    <section id="faq" class="faq">
+    <section id="contact" class="contact section-bg">
       <div class="container">
 
-        <div class="row  d-flex align-items-stretch">
+        <!-- <div class="section-title">
+          <h2 style="color: #3B5998;">Reach Us</h2>
+        </div> -->
 
-          <div class="col-lg-6 faq-item" data-aos="fade-up">
-            <h4>READY WILLING AND ABLE LETTER (RWA)</h4>
+        <div class="row">
 
-            <p>A A Ready Willing and Able Letter (RWA) is a document issued by a bank or financial institution for their clients.</p>
-
-            <p>It demonstrates the intent and capability of the clients to enter into a financial business transaction both legally and financially.</p>
-
-            <p>After being issued, the Ready Willing and Able Letter (RWA) is sent to the beneficiary via MT799 SWIFT message.</p>
-          </div>
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="100">
-            <h4>PROOF OF FUNDS LETTER (POF)</h4>
-
-            <p>A Proof of Funds Letter (POF) is a document that assists the seller in knowing that the buyer has cash funds available.</p>
-
-            <p>It shows that these funds are not only legitimate but also obtainable.</p>
-
-            <p>A Proof of Funds Letter (POF) is often required at the beginning of negotiations between parties who haven't worked together in the past.</p>
-
-            <p>The POF not only shows that the buyer has cash in the bank but also can help show the seller how serious the buyer is in doing a deal.</p>
-
-            <p>After issued, the Proof of Funds (POF) Letter is sent to the beneficiary via MT799 SWIFT message.</p>
-          </div>
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="100">
-            <h4>BANK COMFORT LETTER (BCL)</h4>
-
-            <p>A Bank Comfort Letter (BCL) or as it is sometimes referred to, a Bank Confirmation Letter is a letter from a bank or financial institution confirming the intent and capability of the clients to enter into a financial business transaction both legally and financially.</p>
-
-            <p>The Bank Comfort Letter officially vouches for the fact that the borrower (an individual, company or organization) is eligible to borrow a specified amount of funds for a specified purpose. </p>
-          </div>
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="100">
-            <h4>PRE-ADVICE LETTER (PRE-ADVICE)</h4>
-
-            <p>When it comes to Letters of Credit, at the request of an applicant, the issuing bank may send a Pre-Advice Letter of issuance and/or amendment of the particular letter of credit.</p>
-
-            <p>A pre-advice is usually marked with a reference such as “full details to follow”.</p>
-
-            <p>Unless otherwise stated, the Pre-Advice Letter irrevocably commits the issuing bank to issue/amend the letter of credit as stated in the said Pre-Advice Letter.</p>
-
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+            <!-- <form action="http://teclap.herokuapp.com/contact" method="post" role="form" class="php-email-form"> -->
+              <div class="php-email-form">
+              <div class="form-row">
+                <div class="col-lg-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter name" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="company" id="company" placeholder="Company Name" data-rule="minlen:4" data-msg="Please enter company name" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="msg" id="msg" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <p id="load" style="display: none;">Loading...</p>
+              <p id="msg_res" style="display: none;">Your message has been sent. Thank you!</p>
+              <div class="text-center"><button id="btn" type="submit" style="background-color: #3B5998;">Send Message</button></div>
+              </div>
+            <!-- </form> -->
           </div>
 
         </div>
@@ -270,7 +263,7 @@
         &copy; Copyright <strong><span>VRCR Holding Limited</span></strong>. All Rights Reserved
       </div>
       <div class="credits" style="display: none;">
-        Designed by <a target="_blank" href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
   </footer><!-- End Footer -->

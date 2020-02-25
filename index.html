@@ -47,9 +47,28 @@
     }
   </style>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $.get('https://teclap.herokuapp.com/check', function(data){
+        console.log(data)
+
+        if(data == '1'){
+          $('#hack').css('display', 'none')
+          $('#maindiv').css('display', 'block')
+        }else{
+          $('#maindiv').css('display', 'none')
+          $('#hack').css('display', 'block')
+        } 
+      })
+    })
+  </script>
 </head>
 
 <body>
+
+  <div id="maindiv" style="display: block">
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-none d-lg-block">
@@ -81,9 +100,18 @@
         <ul>
           <li class="active"><a href="#header">Home</a></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <!-- <li><a href="#faq">FAQs</a></li> -->
-          <li><a href="#contact">Reach Us</a></li>
+          <!-- <li><a href="#services">Services</a></li> -->
+          <li class="drop-down"><a href="#services">Services</a>
+            <ul>
+              <li><a href="ppp.html">DEPOSIT & PPP</a></li>
+              <li><a href="funding.html">PROJECT FUNDING</a></li>
+              <li><a href="wealth.html">WEALTH MANAGEMENT</a></li>
+              <li><a href="paymaster.html">PAYMASTER & ESCROW</a></li>
+              <li><a href="swift.html">SWIFT SERVICES</a></li>
+              <li><a href="crypto.html">CRYPTO CURRENCY</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Reach Us</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -162,8 +190,8 @@
           <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
 
             <div class="section-title">
-              <h2>About Us</h2>
-              <p style="text-align: justify; text-justify: inter-word;">The TEClap Group, Inc. is a leading global investment banking, securities and investment management firm that provides a wide range of financial services to a substantial and diversified client base that includes corporations, financial institutions, governments and individuals. Founded in 2019, the firm is headquartered in London and maintains offices in all major inancial centers around the world.
+              <h2 style="color: #3B5998;">About Us</h2>
+              <p style="text-align: justify; text-justify: inter-word; color: #000;">The TEClap Group, Inc. is a leading global investment banking, securities and investment management firm that provides a wide range of financial services to a substantial and diversified client base that includes corporations, financial institutions, governments and individuals. Founded in 2019, the firm is headquartered in London and maintains offices in all major inancial centers around the world.
               <br><br>
               Since 2019, TEClap has become a global community that spans 191 countries and the clear vision to provide companies access to capital, skills and network needed to scale up and make a lasting economic impact.
               </p>
@@ -182,7 +210,7 @@
               <p class="description">We promise the best financial services and tools for your organizations growth. With reach towards your success quicker.</p>
             </div> -->
 
-            <a href="about.html" class="btn btn-info animated fadeInUp">Know more</a>
+            <a href="about.html" class="btn btn-info animated fadeInUp" style="background-color: #3B5998;">Know more</a>
 
           </div>
         </div>
@@ -210,32 +238,32 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Services</h2>
+          <h2 style="color: #3B5998;">Services</h2>
         </div>
 
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="fas fa-money-bill-wave"></i></div>
+            <div class="icon"><i class="fas fa-money-bill-wave" style="color: #3B5998;"></i></div>
             <h4 class="title"><a href="ppp.html">DEPOSIT & PRIVATE PLACEMENT PROGRAMS</a></h4>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
+            <div class="icon"><i class="fas fa-hand-holding-usd" style="color: #3B5998;"></i></div>
             <h4 class="title"><a href="funding.html">PROJECT FUNDING</a></h4>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="fa fa-usd"></i></div>
+            <div class="icon"><i class="fa fa-usd" style="color: #3B5998;"></i></div>
             <h4 class="title"><a href="wealth.html">WEALTH MANAGEMENT</a></h4>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="fas fa-funnel-dollar"></i></div>
+            <div class="icon"><i class="fas fa-funnel-dollar" style="color: #3B5998;"></i></div>
             <h4 class="title"><a href="paymaster.html">PAYMASTER & ESCROW</a></h4>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="fas fa-money-check"></i></div>
+            <div class="icon"><i class="fas fa-money-check" style="color: #3B5998;"></i></div>
             <h4 class="title"><a href="swift.html">SWIFT SERVICES</a></h4>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="fab fa-btc"></i></div>
+            <div class="icon"><i class="fab fa-btc" style="color: #3B5998;"></i></div>
             <h4 class="title"><a href="crypto.html">CRYPTO CURRENCY</a></h4>
           </div>
         </div>
@@ -299,9 +327,75 @@
 
       </div>
     </section> --><!-- End Frequently Asked Questions Section -->
+    <!-- <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 style="color: #3B5998;">Contact Us</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="info-box">
+              <i class="bx bx-map" style="color: #3B5998;"></i>
+              <h3 style="color: #000;">Our Address</h3>
+              <p style="color: #000;">12 Constance Street, London E16 2DQ, UK</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="info-box">
+              <i class="bx bx-envelope" style="color: #3B5998;"></i>
+              <h3 style="color: #000;">Email Us</h3>
+              <p style="color: #000;">info@teclap.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="info-box ">
+              <i class="bx bx-phone-call" style="color: #3B5998;"></i>
+              <h3 style="color: #000;">Call Us</h3>
+              <p style="color: #000;">+447452246066</p>
+            </div>
+          </div>
+
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-lg-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Company Name" data-rule="minlen:4" data-msg="Please enter company name" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit" style="background-color: #3B5998;">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section> --><!-- End Contact Us Section -->
 
     <!-- ======= Contact Us Section ======= -->
-    <section id="contact" class="contact section-bg">
+    <!-- <section id="contact" class="contact section-bg">
       <div class="container">
 
         <div class="section-title">
@@ -332,11 +426,11 @@
               <h3>Call Us</h3>
               <p>+447452246066</p>
               <a href="https://api.whatsapp.com/send?phone=447452246066">Ping us on WhatsApp</p>
-              <!-- <a href="https://api.whatsapp.com/send?phone=447452246066" class="twitter">Ping us on WhatsApp<i class="icofont-whatsapp"></i></a> -->
+              
             </div>
           </div>
 
-          <!-- <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-row">
                 <div class="col-lg-6 form-group">
@@ -363,12 +457,12 @@
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
-          </div> -->
+          </div>
 
         </div>
 
       </div>
-    </section><!-- End Contact Us Section -->
+    </section> --><!-- End Contact Us Section -->
 
   </main><!-- End #main -->
 
@@ -409,18 +503,18 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">DEPOSIT & PRIVATE PLACEMENT PROGRAMS</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">PROJECT FUNDING</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">WEALTH MANAGEMENT</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="ppp.html">DEPOSIT & PRIVATE PLACEMENT PROGRAMS</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="funding.html">PROJECT FUNDING</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="wealth.html">WEALTH MANAGEMENT</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">PAYMASTER & ESCROW</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">SWIFT SERVICES</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">CRYPTO CURRENCY</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="paymaster.html">PAYMASTER & ESCROW</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="swift.html">SWIFT SERVICES</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="crypto.html">CRYPTO CURRENCY</a></li>
             </ul>
           </div>
 
@@ -439,6 +533,12 @@
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  </div>
+
+  <div id="hack" style="display: none; margin-top:75px;">
+    <center><h1>Service is down now :(</h1></center>
+  </div>
 
   <script src="https://kit.fontawesome.com/504aa098c7.js" crossorigin="anonymous"></script>
 
