@@ -49,21 +49,8 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $.get('https://teclap.herokuapp.com/check', function(data){
-        console.log(data)
-
-        if(data == '1'){
-          $('#hack').css('display', 'none')
-          $('#maindiv').css('display', 'block')
-        }else{
-          $('#maindiv').css('display', 'none')
-          $('#hack').css('display', 'block')
-        } 
-      })
-    })
-  </script>
+<script src="assets/js/fun.js"></script>
+  
 </head>
 
 <body>
